@@ -18,13 +18,15 @@ public class SubTask19 {
                 sum[i] = sum[i] + a[i][j];
             }
         }
+        int k = 1;
         int max = sum[1];
         for (int i = 0; i < x; i++) {
             if (sum[i] > max) {
                 max = sum[i];
+                k = i;
             }
         }
-        System.out.print("Maximum sum is: " + max);
+        System.out.print("Maximum sum is: " + k);
     }
 
 
