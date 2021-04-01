@@ -2,7 +2,7 @@ package com.epam.intro;
 
 import java.util.Scanner;
 
-public class SubTask18 {
+public class SubTask19 {
     public static void main(String[] args) {
         int y = readVariable("count of rows: ");
         int x = readVariable("count of columns: ");
@@ -12,20 +12,19 @@ public class SubTask18 {
                 a[i][j] = readVariable("a[" + i + "," + j + "]");
             }
         }
-        int k = readVariable("number of first column: ");
-        int p = readVariable("number of second column: ");
-        int tmp = 0;
-        for (int j = 0; j < y; j++) {
-            tmp = a[k][j];
-            a[k][j] = a[p][j];
-            a[p][j] = tmp;
-        }
-        for (int j = 0; j < y; j++) {
-            for (int i = 0; i < x; i ++) {
-                System.out.print(a[i][j] + " ");
+        int[] sum = new int [x];
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                sum[i] = sum[i] + a[i][j];
             }
-            System.out.println();
         }
+        int max = sum[1];
+        for (int i = 0; i < x; i++) {
+            if (sum[i] > max) {
+                max = sum[i];
+            }
+        }
+        System.out.print("Maximum sum is: " + max);
     }
 
 
