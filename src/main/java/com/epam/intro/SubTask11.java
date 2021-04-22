@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class SubTask11 {
-    private static final String TEMPLATE = "\s";
+    private static final String TEMPLATE = "\\s";
     public static void main(String[] args) {
         int x = readVariable("count of columns: ");
         int y = readVariable("count of rows: ");
